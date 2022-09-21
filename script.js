@@ -10,9 +10,15 @@ let random_grade_div = document.getElementById("random-grade");
 
 
 
+grades.pop();
+grades.push(99);
+grades.forEach(item => {
+  all_grades_div.innerHTML += `<span>${item}<span>`
+  
+});
 
-
-
+let randomIndex = Math.floor(Math.random() * grades.length);
+random_grade_div.innerHTML = `<span>#${randomIndex}: ${grades[randomIndex]}<span>`
 
 
 
@@ -27,11 +33,20 @@ let course = {
 
 //Change studentsCount,track property here
 
+course.studentsCount = 40;
+course.track = "web";
 
 
 //Console log here
 
-
+console.log("Hello my name is sheema, I'm in "+ course.track + "at " + course.name );
 
 //Create student object here
+ 
+let student = {
 
+  name: "Sheema",
+  universty: "Kuwait UNIVERSITY"
+
+
+}
